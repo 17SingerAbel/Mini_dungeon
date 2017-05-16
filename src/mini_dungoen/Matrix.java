@@ -5,8 +5,6 @@ public class Matrix<T> {
   private final int lenRow;
   /** The lenght of the column in the matrix. */
   private final int lenCol;
-  /** The total number of elements in the matrix. */
-  private int size;
   /** The container contains Elements T. */
   private Object[] container;
    
@@ -20,7 +18,7 @@ public class Matrix<T> {
     }
     this.lenRow = row;
     this.lenCol = col;
-    this.size = lenRow * lenCol;
+    int size = row * col;
     this.container = new Object[size];
   }
  
