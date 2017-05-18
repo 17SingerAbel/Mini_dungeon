@@ -15,20 +15,17 @@ There is an exit on the map showing the entrance of next level. The goal of play
 
 ## TODO List
 | Task          | Status     |
-| ------------- |:----------:| 
-| Map:          | Processing |
+| Map:          |            |
 | 2D Matrix     | Done       |
 | Map Item      | Processing | 
 | Map GUI       | Not Yet    | 
-| ------------- |:----------:| 
-| Dungeon Item  | Processing | 
+| Dungeon Item: |            | 
 | Hero          | Processing | 
 | Monster       | Processing | 
 | Trap          | Not Yet    | 
 | Divines       | Not Yet    | 
 | Treasure      | Processing | 
-| ------------- |:----------:| 
-| Game State    | Not Yet    |
+| Game State:   |            |
 | Save/Load     | Not Yet    |
 
 ## Change Log
