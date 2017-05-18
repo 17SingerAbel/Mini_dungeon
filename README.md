@@ -3,7 +3,7 @@ Basically, this project is to build a turn-based rogue-like game. The idea of th
 
 Each game starts with a random constructed dungeon with monsters, traps, divines and treasures in a 2D tile-based map.
 
-  * Monsters: monsters can attack hero and can be destroyed by hero. They have HP, skills and some other attributes. After        killed by hero, hero gains exp.
+  * Monsters: monsters can attack hero and can be destroyed by hero. They have HP, skills and some other attributes. After   killed by hero, hero gains exp.
 
   * Traps: an item that only attacks hero once then destroy itself.
 
