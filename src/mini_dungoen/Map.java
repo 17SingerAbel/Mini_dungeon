@@ -11,8 +11,13 @@ public class Map {
   /** The RPG role, hero. */
   private Hero hero;
  
-  public Map(Matrix matrix, Hero hero) {
-    
+  public Map(Matrix matrix) {
+    this.matrix = matrix;
+  }
+  
+  public String toString() {
+    String result = null;
+    return result;
   }
 
 }

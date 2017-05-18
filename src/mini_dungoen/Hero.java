@@ -15,7 +15,7 @@ public class Hero extends Creature {
   /** The movement speed. */
   private int speed;
   /** The buff hero has. */
-  private ArrayList buffList;
+  private ArrayList<Buff> buffList;
   
   /**
    * The hero.
@@ -26,11 +26,42 @@ public class Hero extends Creature {
    */
   public Hero(String name, int hp, int rowIndex, int columnIndex) {
     super(name, hp, rowIndex, columnIndex);
+    this.attack = 10;
     this.weapon = null;
     this.speed = 2;
-    this.buffList = new ArrayList();
-
+    this.buffList = new ArrayList<Buff>();
   }
+  
+  @Override
+  public void move() {
+    
+  }
+  
+  public int getAttack() {
+    return this.attack;
+  }
+  
+  public void setAttack(int attack) {
+    this.attack = attack;
+  }
+  
+  public Weapon getWeapon() {
+    return this.weapon;
+  }
+  
+  public void setWeapon(Weapon weapon) {
+    this.weapon = weapon;
+  }
+  
+  public int getSpeed() {
+    return this.speed;
+  }
+  
+  public void setSpeed() {
+    this.speed = speed;
+  }
+  
+  
   
   
 }

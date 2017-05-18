@@ -5,23 +5,8 @@ package mini_dungoen;
  * @author abelsang
  *
  */
-public class Item {
-  /** The row index of the item. */
-  private int rowIndex;
-  /** The column index of the item. */
-  private int columnIndex;
-  
+public class Item extends Unit {
   public Item(int rowIndex, int columnIndex) {
-    this.rowIndex = rowIndex;
-    this.columnIndex = columnIndex;
+    super(rowIndex, columnIndex);
   }
-  
-  public int getRowIndex() {
-    return this.rowIndex;
-  }
-  
-  public int getColumnIndex() {
-    return this.columnIndex;
-  }
-
 }

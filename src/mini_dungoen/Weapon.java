@@ -19,7 +19,8 @@ public class Weapon extends Item {
    * @param durablity The durablity of usage.
    * @param levelLimit The level hero can use the weapon. 
    */
-  public Weapon(String appearance, int rowIndex, int columnIndex, int damage, int durablity, int levelLimit) {
+  public Weapon(String appearance, int rowIndex, 
+      int columnIndex, int damage, int durablity, int levelLimit) {
     super(rowIndex, columnIndex);
     this.appearance = appearance;
     this.damage = damage;
@@ -38,6 +39,5 @@ public class Weapon extends Item {
   public int getLevelLimit() {
     return this.levelLimit;
   }
-
 
 }
