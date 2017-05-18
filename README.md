@@ -15,6 +15,7 @@ There is an exit on the map showing the entrance of next level. The goal of play
 
 ## TODO List
 | Task          | Status     |
+| ------------- |:----------:|
 | Map:          |            |
 | 2D Matrix     | Done       |
 | Map Item      | Processing | 
