@@ -14,7 +14,25 @@ Each game starts with a random constructed dungeon with monsters, traps, divines
 There is an exit on the map showing the entrance of next level. The goal of player is trying to collect treasures as much as possible, gain exp as much as possible and then reaching the exit.
 
 ## TODO List
+| Task          | Status     |
+| ------------- |:----------:| 
+| Map:          | Processing |
+| 2D Matrix     | Done       |
+| Map Item      | Processing | 
+| Map GUI       | Not Yet    | 
+| ------------- |:----------:| 
+| Dungeon Item  | Processing | 
+| Hero          | Processing | 
+| Monster       | Processing | 
+| Trap          | Not Yet    | 
+| Divines       | Not Yet    | 
+| Treasure      | Processing | 
+| ------------- |:----------:| 
+| Game State    | Not Yet    |
+| Save/Load     | Not Yet    |
 
 ## Change Log
+  * 2017/05/13 - Complete 2D Matrix and unit test.
+  * 2017/5/17 - Update UML, create several Classed for the Map and Dungeon.
 
 
