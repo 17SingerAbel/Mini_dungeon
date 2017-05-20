@@ -32,5 +32,5 @@ There is an exit on the map showing the entrance of next level. The goal of play
 ## Change Log
   * 2017/05/13 - Complete 2D Matrix and unit test.
   * 2017/5/17 - Update UML, create several Classed for the Map and Dungeon.
-
+  * 2017/5/19 - Simpe map with walls.
 
