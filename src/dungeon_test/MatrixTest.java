@@ -70,4 +70,9 @@ public class MatrixTest {
     matrix2.setItem("ASDF", 1, -4);
   }
   
+  @Test
+  public void testBuildWall() {
+    Matrix<String> matrix = new Matrix<String>(3,5);
+    matrix.buildWall();
+  }
 }

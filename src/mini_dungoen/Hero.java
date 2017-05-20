@@ -37,6 +37,14 @@ public class Hero extends Creature {
     
   }
   
+  public void addBuff() {
+    
+  }
+  
+  public void deleteBuff() {
+    
+  }
+  
   public int getAttack() {
     return this.attack;
   }
@@ -61,7 +69,8 @@ public class Hero extends Creature {
     this.speed = speed;
   }
   
-  
-  
-  
+  public ArrayList<Buff> getBuffList() {
+    return this.buffList;
+  }
+ 
 }

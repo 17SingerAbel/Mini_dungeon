@@ -5,8 +5,15 @@ public class Matrix<T> {
   private final int lenRow;
   /** The lenght of the column in the matrix. */
   private final int lenCol;
+  /** The number of element in ocntainer. */
+  private final int size;
   /** The container contains Elements T. */
   private Object[] container;
+  /** The wall. */
+  private static final String wall = "--—";
+  /** The bound. */
+  private static final String bound = "|";
+ 
    
   public Matrix(int row, int col) {
     // len is start at 1;
@@ -18,7 +25,7 @@ public class Matrix<T> {
     }
     this.lenRow = row;
     this.lenCol = col;
-    int size = row * col;
+    this.size = row * col;
     this.container = new Object[size];
   }
  
@@ -67,6 +74,21 @@ public class Matrix<T> {
     }
   }
   
+  /**
+   * Add elements wall like boundary for the map.
+   */
+  public void buildWall() {
+    for (int i = 0; i< size-1;i++) {
+      this.container[i] = wall;
+    }
+    for (int i =0; i< size-1;i = i + lenCol-2) {
+      this.container[i] = bound;
+    }
+    for (int i = lenCol-2; i<size-1; i = i + lenRow-2) {
+      this.container[i] = bound;
+    }
+  }
+  
   public int getLenRow() {
     return this.lenRow;
   }
@@ -75,4 +97,7 @@ public class Matrix<T> {
     return this.lenCol;
   }
   
+  public Object[] getContainer() {
+    return this.container;
+  }
 }
