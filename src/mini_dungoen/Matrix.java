@@ -78,13 +78,22 @@ public class Matrix<T> {
    * Add elements wall like boundary for the map.
    */
   public void buildWall() {
-    for (int i = 0; i< size-1;i++) {
+    //for (int i = 0; i< size-1;i++) {
+      //this.container[i] = wall;
+    //}
+    for (int j = 1; j < lenCol - 1; j++) {
+      System.out.println(lenCol);
+      this.container[j] = wall;
+    }
+
+    for (int i= size-2; i > size - lenCol; i = i-1) {
       this.container[i] = wall;
     }
-    for (int i =0; i< size-1;i = i + lenCol-2) {
+    
+    for (int i =0; i< size-1;i = i + lenCol) {
       this.container[i] = bound;
     }
-    for (int i = lenCol-2; i<size-1; i = i + lenRow-2) {
+    for (int i = lenCol-1; i<size; i = i + lenCol) {
       this.container[i] = bound;
     }
   }
