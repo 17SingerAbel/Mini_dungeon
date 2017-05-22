@@ -10,9 +10,11 @@ public class Matrix<T> {
   /** The container contains Elements T. */
   private Object[] container;
   /** The wall. */
-  private static final String wall = "--—";
+  private static final String WALL = "--—";
   /** The bound. */
-  private static final String bound = "|";
+  private static final String BOUND = "|";
+  /** The empty. */
+  private static final String EMPTY = "   ";
  
    
   public Matrix(int row, int col) {
@@ -78,23 +80,22 @@ public class Matrix<T> {
    * Add elements wall like boundary for the map.
    */
   public void buildWall() {
-    //for (int i = 0; i< size-1;i++) {
-      //this.container[i] = wall;
-    //}
+    for (int i = 0; i< size;i++) {
+      this.container[i] = EMPTY;
+    }
     for (int j = 1; j < lenCol - 1; j++) {
-      System.out.println(lenCol);
-      this.container[j] = wall;
+      this.container[j] = WALL;
     }
 
     for (int i= size-2; i > size - lenCol; i = i-1) {
-      this.container[i] = wall;
+      this.container[i] = WALL;
     }
     
     for (int i =0; i< size-1;i = i + lenCol) {
-      this.container[i] = bound;
+      this.container[i] = BOUND;
     }
     for (int i = lenCol-1; i<size; i = i + lenCol) {
-      this.container[i] = bound;
+      this.container[i] = BOUND;
     }
   }
   

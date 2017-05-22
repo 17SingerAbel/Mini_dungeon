@@ -7,6 +7,10 @@ public class Simulation {
     matrix.buildWall();
     
     Map map = new Map(matrix);
+    Hero hero = new Hero("Alex",10, 4, 6, matrix);
+    map.addHero(hero);
+    hero.moveUp();
     map.getMap();
+
   }
 }

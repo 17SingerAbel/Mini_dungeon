@@ -31,5 +31,12 @@ public class Map {
     }
   }
   
+  public void addHero(Hero hero) {
+    int rowIndex = hero.getRowIndex();
+    int colIndex = hero.getColumnIndex();
+    int index = rowIndex * this.matrix.getLenCol() + colIndex;
+    this.matrix.getContainer()[index] = hero.getAppearance();
+  }
+  
 
 }
