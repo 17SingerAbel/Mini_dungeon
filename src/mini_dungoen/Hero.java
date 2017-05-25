@@ -65,12 +65,30 @@ public class Hero extends Creature {
     this.heroIndex = currIndex;
   }
   public void moveDown() {
+    int rowIndex = this.getRowIndex();
+    int colIndex = this.getColumnIndex();
+    int currIndex = getHeroIndex(rowIndex + 1, colIndex);
+    this.matrix.getContainer()[currIndex] = this.appearance;
+    this.matrix.getContainer()[heroIndex] = "   ";
+    this.heroIndex = currIndex;
     
   }
   public void moveLeft() {
+    int rowIndex = this.getRowIndex();
+    int colIndex = this.getColumnIndex();
+    int currIndex = getHeroIndex(rowIndex, colIndex -1);
+    this.matrix.getContainer()[currIndex] = this.appearance;
+    this.matrix.getContainer()[heroIndex] = "   ";
+    this.heroIndex = currIndex;
     
   }
   public void moveRight() {
+    int rowIndex = this.getRowIndex();
+    int colIndex = this.getColumnIndex();
+    int currIndex = getHeroIndex(rowIndex, colIndex +1);
+    this.matrix.getContainer()[currIndex] = this.appearance;
+    this.matrix.getContainer()[heroIndex] = "   ";
+    this.heroIndex = currIndex;
     
   }
   
