@@ -8,7 +8,7 @@ import java.util.ArrayList;
  *
  */
 public class Hero extends Creature {
-  /** The damge hero can attack. */
+  /** The damage hero can attack. */
   private int attack;
   /** The weapon hero took. */
   private Weapon weapon;
@@ -40,7 +40,7 @@ public class Hero extends Creature {
     this.buffList = new ArrayList<Buff>();
     this.appearance = "H*o";
     this.matrix = matrix;
-    this.heroIndex = getHeroIndex(rowIndex, columnIndex);   
+    this.heroIndex = rowIndex * this.matrix.getLenCol() + columnIndex;
   }
   
   @Override
@@ -57,38 +57,34 @@ public class Hero extends Creature {
   }
   
   public void moveUp() {
-    int rowIndex = this.getRowIndex();
-    int colIndex = this.getColumnIndex();
-    int currIndex = getHeroIndex(rowIndex -1, colIndex);
-    this.matrix.getContainer()[currIndex] = this.appearance;
-    this.matrix.getContainer()[heroIndex] = "   ";
-    this.heroIndex = currIndex;
+    if (this.getRowIndex() >= 2) {
+      this.rowIndex = this.getRowIndex() - 1 ;
+      this.columnIndex = this.getColumnIndex();
+      setHeroIndex(rowIndex , columnIndex);
+    }
   }
   public void moveDown() {
-    int rowIndex = this.getRowIndex();
-    int colIndex = this.getColumnIndex();
-    int currIndex = getHeroIndex(rowIndex + 1, colIndex);
-    this.matrix.getContainer()[currIndex] = this.appearance;
-    this.matrix.getContainer()[heroIndex] = "   ";
-    this.heroIndex = currIndex;
+    if (this.getRowIndex() < this.matrix.getLenRow() -2) {
+      this.rowIndex = this.getRowIndex() + 1;
+      this.columnIndex = this.getColumnIndex();
+      setHeroIndex(rowIndex, columnIndex);
+    }
     
   }
   public void moveLeft() {
-    int rowIndex = this.getRowIndex();
-    int colIndex = this.getColumnIndex();
-    int currIndex = getHeroIndex(rowIndex, colIndex -1);
-    this.matrix.getContainer()[currIndex] = this.appearance;
-    this.matrix.getContainer()[heroIndex] = "   ";
-    this.heroIndex = currIndex;
+    if (this.getColumnIndex() >= 2) {
+      this.rowIndex = this.getRowIndex();
+      this.columnIndex = this.getColumnIndex() - 1;
+      setHeroIndex(rowIndex, columnIndex);
+    }
     
   }
   public void moveRight() {
-    int rowIndex = this.getRowIndex();
-    int colIndex = this.getColumnIndex();
-    int currIndex = getHeroIndex(rowIndex, colIndex +1);
-    this.matrix.getContainer()[currIndex] = this.appearance;
-    this.matrix.getContainer()[heroIndex] = "   ";
-    this.heroIndex = currIndex;
+    if (this.getColumnIndex() < this.matrix.getLenCol() -2) {
+      this.rowIndex = this.getRowIndex();
+      this.columnIndex = this.getColumnIndex() + 1;
+      setHeroIndex(rowIndex, columnIndex);
+    }
     
   }
   
@@ -131,8 +127,10 @@ public class Hero extends Creature {
     return this.appearance;
   }
   
-  public int getHeroIndex(int rowIndex, int colIndex) {
-    int index = rowIndex * this.matrix.getLenCol() + colIndex;
-    return index;
+  public void setHeroIndex(int rowIndex, int colIndex) {
+    int currIndex = rowIndex * this.matrix.getLenCol() + colIndex;
+    this.matrix.getContainer()[currIndex] = this.appearance;
+    this.matrix.getContainer()[heroIndex] = "   ";
+    this.heroIndex = currIndex;
   }
 }

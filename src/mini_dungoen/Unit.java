@@ -3,9 +3,9 @@ package mini_dungoen;
 public abstract class Unit {
 
   /** The row index of the unit. */
-  private int rowIndex;
+  public  int rowIndex;
   /** The column index of the unit. */
-  private int columnIndex;
+  public int columnIndex;
   
   public Unit(int rowIndex, int columnIndex) {
     this.rowIndex = rowIndex;
