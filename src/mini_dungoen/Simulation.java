@@ -11,6 +11,8 @@ public class Simulation {
     map.addHero(hero);
     hero.moveUp();
     hero.moveRight();
+    hero.moveDown();
+    hero.moveDown();
     map.getMap();
 
   }
